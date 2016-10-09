@@ -1,0 +1,37 @@
+name:                fl-haskell
+version:             0.1.0.0
+synopsis:            Simple project template from stack
+description:         Please see README.md
+homepage:            https://github.com/githubuser/fl-haskell#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2016 Author name here
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  exposed-modules:     Sortedtree
+  build-depends:       QuickCheck >= 2.8.2,
+                       base >= 4.7 && < 5
+
+executable fl-haskell
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       QuickCheck >= 2.8.2,
+                       base >= 4.7 && < 5,
+                       fl-haskell
+
+test-suite fl-haskell-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Check.hs
+  default-language:    Haskell2010
+  build-depends:       QuickCheck >= 2.8.2,
+                       base >= 4.7 && < 5,
+                       fl-haskell
